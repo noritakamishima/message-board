@@ -17,11 +17,41 @@
 
 
 
-<%= form_for(Message.new) do |f| %>
-  名前:
-  <%= f.text_field :name %>
+    
 
-  内容:
-  <%= f.text_field :body %>
-  <%= f.submit class: "btn btn-sm btn-primary" %>
+<%= form_for(Message.new) do |f| %>
+
+<div class="container">
+    
+         <div class="raw">
+            <label class="control-label">
+                名前:
+            </label>
+            <div>
+              <%= f.text_field :name %>
+            </div>
+        
+        </div>
+        
+        <br />
+
+        <div class="raw">   
+     
+           <label class="control-label">
+             内容:
+            </label>
+                
+            <div>
+              <%= f.text_area :body %>
+            </div>
+         </div>
+            
+        <br />
+            
+        <div class="raw">
+              <%= f.submit class: "btn btn-sm btn-primary" %>
+       </div>
+</div>
+
 <% end %>
+
